@@ -63,7 +63,6 @@ public class HuffmanSubmit implements Huffman {
 		
 		
 		//with the freqFile, we can build our tree and give each character a codeword
-		
 		tree treeTemp = new tree();
 		treeTemp.buildTree(readList);
 		
@@ -73,8 +72,12 @@ public class HuffmanSubmit implements Huffman {
 		
 		
 		//encode into output file the codewords according to character!
+		//we need a search or find method to do this?
 		
    }
+	
+	
+	
 	
 	
 
@@ -112,6 +115,14 @@ public class HuffmanSubmit implements Huffman {
    public int frequency() {
 	   return frequency;
    }
+   
+   public boolean equals(HuffLeafNode node) {
+	if(node.weight == this.weight) {
+		return true;
+	}
+	   return false;
+	   
+   }
    }
    
    
@@ -134,8 +145,8 @@ public class HuffmanSubmit implements Huffman {
    public boolean isLeaf() { return false; }
    
    
-   
    }
+   
    class tree{
 	   HuffInternalNode<?> access;
 	   
@@ -183,12 +194,15 @@ public class HuffmanSubmit implements Huffman {
 	   
 	   public String search(char x, int frequency) {
 		   
+		   //for search we need to go left if 0 and right if 1
+		   
 		   
 		   
 		   return null;
 	   }
 	   
 	   public void searchHelper(HuffInternalNode node, Character x, int frequency) {
+		   
 		   
 		   
 	   }
