@@ -171,7 +171,7 @@ public class HuffmanSubmit implements Huffman {
 		    //sort the array!
 		    for(int i = 0; i < LeafArray.size(); i++) {
 		    	for(int j = 0; j < LeafArray.size()-i; j++) {
-		    		if(LeafArray.get(j).frequency > LeafArray.get(j).frequency) {
+		    		if(LeafArray.get(j).frequency > LeafArray.get(j+1).frequency) {
 		    			swap(LeafArray.get(j),LeafArray.get(j+1));
 		    		}
 		    	}
