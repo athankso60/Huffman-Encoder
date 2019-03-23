@@ -63,7 +63,7 @@ public class HuffmanSubmit implements Huffman {
 		
 		
 		//with the freqFile, we can build our tree and give each character a codeword
-		HuffTree<Character> treeTemp = buildTree(readList);
+		HuffTree<Character> treeTemp = (HuffTree<Character>) buildTree(readList);
 		
 		
 		
