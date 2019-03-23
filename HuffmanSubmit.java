@@ -63,8 +63,7 @@ public class HuffmanSubmit implements Huffman {
 		
 		
 		//with the freqFile, we can build our tree and give each character a codeword
-		tree treeTemp = new tree();
-		treeTemp.buildTree(readList);
+		HuffTree<Character> treeTemp = buildTree(readList);
 		
 		
 		
@@ -180,7 +179,7 @@ public class HuffmanSubmit implements Huffman {
 	   return buildTreeHelper(TreeArray);
    }
    
-   public HuffTree<?> HuffmanSubmit(ArrayList<HuffLeafNode> LeafArray){
+   public HuffTree<?> buildTree(ArrayList<HuffLeafNode> LeafArray){
 	   ArrayList<HuffTree> TreeArray = new ArrayList<HuffTree>();
 	   for(HuffLeafNode N:LeafArray) {
 		   HuffTree<?> temptree = new HuffTree<>(N.element,N.frequency);
@@ -196,6 +195,9 @@ public class HuffmanSubmit implements Huffman {
    class HuffTree<E> implements Comparable<HuffTree<E>>{
 	   private HuffBaseNode<E> root; // Root of the tree
 	   /** Constructors */
+	   public HuffTree() {
+		   
+	   }
 	   public HuffTree(E el, int frequency){ 
 		   root = new HuffLeafNode<E>(el, 0,frequency); //we used zero subject to change
 		   }
